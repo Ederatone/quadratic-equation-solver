@@ -58,3 +58,8 @@ This represents the equation:
 ```
 (1.0) x^2 + (-3.0) x + (2.0) = 0
 ```
+
+## Revert commit
+___
+
+Revert commit: [`517e14c`](https://github.com/Ederatone/quadratic-equation-solver/commit/05a479ec37e6b1b863944a24f83d6f3d993d292a)
