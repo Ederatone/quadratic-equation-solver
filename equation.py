@@ -1,6 +1,14 @@
 import sys
 import math
 
+def parse_float(prompt):
+    while True:
+        value = input(f"{prompt} = ").strip()
+        try:
+            return float(value)
+        except ValueError:
+            print(f"Error. Expected a valid real number, got {value} instead")
+
 def solve_quadratic(a, b, c):
     print(f"Equation is: ({a}) x^2 + ({b}) x + ({c}) = 0")
     if a == 0:
@@ -21,3 +29,15 @@ def solve_quadratic(a, b, c):
         print(f"x1 = {root}")
     else:
         print("There are 0 roots")
+
+def interactive_mode():
+    a = parse_float("a")
+    while a == 0:
+        print("Error. a cannot be 0")
+        a = parse_float("a")
+    b = parse_float("b")
+    c = parse_float("c")
+    solve_quadratic(a, b, c)
+
+if __name__ == "__main__":
+    interactive_mode()
